@@ -1,0 +1,8 @@
+<section class="tapet-details">
+    <h2 class="tapet-name">{{tapet.name}}</h2>
+    <div class="info">
+      <!--<h3 class="artist-reknown">{{artist.reknown}}</h3>-->
+      <img *ngIf="tapet.shortname" src="images/categories-images/{{tapet.shortname}}.jpg" alt="{{tapet.shortname}}">
+      <div class="tapet-description">{{tapet.description}}</div>
+    </div>
+</section>

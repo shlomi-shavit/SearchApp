@@ -1,0 +1,21 @@
+/*------------------------
+  css to tapet-item.html
+------------------------*/
+
+.categories-wrapper ul li h2, .categories-wrapper ul li p {
+    margin: 0;
+}
+
+.categories-wrapper ul li h2 {
+    margin-top: 6px;
+}
+
+.categories-wrapper ul li .img-wrap {
+    width: 300px;
+    height: 270px;
+    overflow: hidden;
+}
+
+.categories-wrapper ul li img {
+    width: 100%;
+}

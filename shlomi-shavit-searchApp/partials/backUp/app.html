@@ -1,0 +1,33 @@
+
+<!-- Search wrapper -->
+<div class="search-wrapper">
+  <h1>Search tapet by category</h1>
+  <label>Search
+    <span *ngIf="name" [innerHTML]="'for: ' +name" class="hasTapets"></span>
+  </label>
+  <input
+    #newTapet
+    [(ngModel)]="name"
+    (keyup)="keyUpEvent($event)"
+    (keyup.enter)="addTapet(newTapet.value);
+    newTapet.value='' "
+  >
+  <button (click)="addTapet(newTapet.value); newTapet.value='' ">Add</button>
+</div>
+<!-- /Search wrapper -->
+
+<!-- output wrapper -->
+<div class="output-search-wrapper">
+  <ul class="tapets-categories">
+    <li class="tapet-item"
+      #tapetContainer
+      (click)="onClick(item, tapetContainer)"
+      *ngFor="let item of tapetsCat">
+
+        <h2 class="tapet-cat-name">{{ item.name }}</h2>
+        <p class="tapet-cat">{{ item.description }}</p>
+
+    </li>
+  </ul>
+</div>
+<!-- /output wrapper -->

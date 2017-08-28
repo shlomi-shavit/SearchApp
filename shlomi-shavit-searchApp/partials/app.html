@@ -1,0 +1,27 @@
+
+<!-- Search wrapper -->
+<div class="search-wrapper">
+  <h1>Search tapet by category</h1>
+  <label>Search
+    <span *ngIf="query" [innerHTML]="'for: ' +query"></span>
+  </label>
+  <input [(ngModel)]="query" (keyup)="removeDetailsTapet(item);" placeholder="type yout tapet category">
+
+</div>
+<!-- /Search wrapper -->
+
+<!-- output wrapper -->
+<div class="categories-wrapper">
+  <!--<ul class="tapets-categories">-->
+  <!-- display when typing only (*ngIf="query") -->
+  <ul class="tapets-categories" *ngIf="query">
+    <li class="tapet-item"
+      (click)="showTapetDetails(item); query=''"
+      *ngFor="let item of (tapetsCat | search: query)">
+      <tapet-item class="tapetItem" [tapet]=item></tapet-item>
+    </li>
+  </ul>
+</div>
+<!-- /output wrapper -->
+
+<tapet-details *ngIf="currentTapet" [tapet]="currentTapet"></tapet-details>

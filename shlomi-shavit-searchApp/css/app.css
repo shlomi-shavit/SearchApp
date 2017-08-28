@@ -1,0 +1,58 @@
+/*------------------
+  css to app.html
+------------------*/
+
+/*-- Search input--*/
+.search-wrapper {
+    width: 90%;
+    color: #717171;
+    padding: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.search-wrapper h1 {
+    margin: 10px 0;
+    font-size: 26px;
+    color: rgb(255, 176, 76);
+}
+
+.search-wrapper input {
+    height: 35px;
+    background-color: transparent;
+    border: solid 1px #ccc;
+    padding: 0 5px;
+}
+
+.search-wrapper button {
+    height: 37px;
+}
+
+/*-- Search output --*/
+.categories-wrapper {
+  color: #8a8a8a;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.categories-wrapper ul {
+    margin: 0;
+    padding: 0;
+}
+
+.categories-wrapper ul li {
+    list-style-type: none;
+    border-top: solid 1px #ccc;
+    margin: 10px 0 10px;
+    padding: 10px;
+    display: inline-block;
+    -webkit-transition: all 0.23s ease-in-out;
+    -moz-transition: all 0.23s ease-in-out;
+    -o-transition: all 0.23s ease-in-out;
+    transition: all 0.23s ease-in-out;
+}
+
+.categories-wrapper ul li:hover{
+  background-color: #6b7c82;
+  color: #fff;
+}
